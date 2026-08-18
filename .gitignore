@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+output/
+input_data/*.csv
+input_data/*.xlsx
+input_data/*.xls
