@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tiktok-live-shop-dashboard
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT
+    envVars:
+      - key: PUBLIC_DEPLOY
+        value: "true"
+      - key: HOST
+        value: "0.0.0.0"
