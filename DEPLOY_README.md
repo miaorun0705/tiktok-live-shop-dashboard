@@ -21,17 +21,16 @@ CSV, XLSX, and XLS are supported.
 
 ## Deploy On Render
 
-1. Put the `nextt_pipeline` folder in a GitHub repository.
-2. In Render, create a new Web Service.
-3. Select the repository.
-4. Set the root directory to `nextt_pipeline`.
-5. Use these settings:
+1. In Render, create a new Web Service.
+2. Select this GitHub repository.
+3. Leave the root directory blank because `app.py` is in the repository root.
+4. Use these settings:
    - Build command: `pip install -r requirements.txt`
    - Start command: `gunicorn app:app --bind 0.0.0.0:$PORT`
-6. Add environment variables:
+5. Add environment variables:
    - `PUBLIC_DEPLOY=true`
    - `HOST=0.0.0.0`
-7. Deploy.
+6. Deploy.
 
 After deployment, Render will give you a public `https://...` URL that you can share.
 
